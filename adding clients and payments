@@ -16,3 +16,16 @@ CREATE TABLE payments (
     FOREIGN KEY (client_id) REFERENCES clients(client_id)
 );
 
+-- Update client details
+UPDATE clients
+SET client_name = 'New Name', 
+    client_email = 'newemail@example.com', 
+    client_phone = '123-456-7890', 
+    client_address = 'New Address'
+WHERE client_id = 1; -- Change the client_id as per your requirement
+
+-- Update payment details
+UPDATE payments
+SET payment_amount = 100.00, 
+    payment_date = '2024-02-26' -- Use the appropriate date format
+WHERE payment_id = 1; -- Change the payment_id as per your requirement
